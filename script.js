@@ -1,6 +1,5 @@
 var isCreatingMainDiv = false;
-
-
+var canRipple = true;
 
 function startCreatingMainDiv(event) {
   isCreatingMainDiv = true;
@@ -11,9 +10,13 @@ function stopCreatingMainDiv() {
   isCreatingMainDiv = false;
 }
 
-function ripple(event){
-  if(isCreatingMainDiv){
-    createMainDiv(event)
+function ripple(event) {
+  if (isCreatingMainDiv && canRipple) {
+    createMainDiv(event);
+    canRipple = false;
+    setTimeout(function () {
+      canRipple = true;
+    }, 100);
   }
 }
 
