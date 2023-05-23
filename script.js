@@ -1,5 +1,7 @@
 var isCreatingMainDiv = false;
 var canRipple = true;
+var delay = 100;
+var divRemovalDelay = 5000
 
 function startCreatingMainDiv(event) {
   isCreatingMainDiv = true;
@@ -16,7 +18,7 @@ function ripple(event) {
     canRipple = false;
     setTimeout(function () {
       canRipple = true;
-    }, 100);
+    }, delay);
   }
 }
 
@@ -49,15 +51,6 @@ function createMainDiv(event) {
       function getRandomPercentage(min, max) {
         var randomPercentage = Math.floor(Math.random() * (max - min + 1) + min);
         return randomPercentage + '%';
-      }
-
-      // Create image in first Wave
-
-      if (i < 2) {
-        var img = document.createElement('img');
-        img.src = 'https://picsum.photos/536/354';
-        img.classList.add('wave-image');
-        waveDiv.appendChild(img);
       }
 
       // Append Wave to main Div
