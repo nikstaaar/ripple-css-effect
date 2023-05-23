@@ -15,6 +15,21 @@ function createMainDiv(event) {
     for (var i = 1; i <= 3; i++) {
       var waveDiv = document.createElement('div');
       waveDiv.classList.add('wave', 'wave' + i);
+      
+    // Give waves randomized shape
+
+      waveDiv.style.borderTopLeftRadius = getRandomPercentage(80,100);
+      waveDiv.style.borderTopRightRadius = getRandomPercentage(80,100);
+      waveDiv.style.borderBottomLeftRadius = getRandomPercentage(80,100);
+      waveDiv.style.borderBottomRightRadius = getRandomPercentage(80,100);
+
+      function getRandomPercentage(min, max) {
+        var randomPercentage = Math.floor(Math.random() * (max - min + 1) + min);
+        return randomPercentage + '%';
+    }
+
+    // Append Wave to main Div
+
       mainDiv.appendChild(waveDiv);
     }
     

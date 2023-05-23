@@ -17,7 +17,6 @@
 .wave {
     width: 100%;
     height: 100%;
-    border-radius: 100%;
     background-color: transparent;
     border: 26px solid rgb(179, 231, 239);
     position: absolute;
@@ -35,8 +34,8 @@
 }
 
 .wave2 {
-    width: 147%;
-    height: 147%;
+    width: 145%;
+    height: 145%;
 }
 
 .wave3 {
