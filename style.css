@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(179, 231, 239);
+    overflow: hidden;
+}
+
+.main{
+    width: 410px;
+    height: 410 px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
