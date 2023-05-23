@@ -30,14 +30,31 @@ body{
     6px 6px 13px rgb(179, 231, 239) inset;
 
     filter: blur(13px);
+
+    animation: ripple 6s infinite ease-in;
 }
 
 .wave2{
-    width: 146%;
-    height: 146%;
+    width: 147%;
+    height: 147%;
 }
 
 .wave3{
     width: 200%;
     height: 200%;
+}
+
+@keyframes ripple {
+    0%{
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    100%{
+        transform: translate(-50%,-50%) scale(0.3);
+        opacity: 0;
+    }
+
+    5%{
+        opacity: 1;
+    }    
 }
