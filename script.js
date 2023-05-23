@@ -56,9 +56,16 @@ function createMainDiv(event) {
       mainDiv.appendChild(waveDiv);
       }
     
+
       // Append the main div to the container
       var container = document.querySelector('.container');
       container.appendChild(mainDiv);
+
+      //Remove the min div after a delay
+
+      setTimeout(function () {
+        mainDiv.remove();
+      }, divRemovalDelay);
 
         
   }
