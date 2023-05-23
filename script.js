@@ -51,6 +51,15 @@ function createMainDiv(event) {
         return randomPercentage + '%';
       }
 
+      // Create image in first Wave
+
+      if (i < 2) {
+        var img = document.createElement('img');
+        img.src = 'https://picsum.photos/536/354';
+        img.classList.add('wave-image');
+        waveDiv.appendChild(img);
+      }
+
       // Append Wave to main Div
 
       mainDiv.appendChild(waveDiv);
